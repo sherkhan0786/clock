@@ -1,0 +1,77 @@
+body{
+	background: radial-gradient(transparent, #175961);
+}
+
+.clock{
+    margin: auto;
+    height: 30vw;
+    width: 30vw;
+    border: 32px solid #290f05;
+    border-radius: 100%;
+    position: relative;
+    background-image: url(clockBg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 110%;
+    box-shadow: 0px 6px 10px 11px darkgrey;
+    margin-top: 50px;
+}
+
+.clock.simple:after {
+    background: #000;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 5%;
+    height: 5%;
+    z-index: 10;
+  }
+
+.minutes-container, .hours-container, .seconds-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+
+.hours {
+    background: #300e01;
+    height: 30%;
+    left: 48.75%;
+    position: absolute;
+    top: 26%;
+    transform-origin: 50% 100%;
+    width: 2.5%;
+  }
+
+.minutes {
+    background: #300e01;
+    height: 40%;
+    left: 49%;
+    position: absolute;
+    top: 16%;
+    transform-origin: 50% 100%;
+    width: 2%;
+}
+
+.seconds {
+    background: #300e01;
+    height: 45%;
+    left: 49.5%;
+    position: absolute;
+    top: 11%;
+    transform-origin: 50% 80%;
+    width: 1%;
+    z-index: 8;
+  }
+
+@keyframes rotate {
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
